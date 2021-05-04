@@ -3,6 +3,8 @@ import { NavLink, useHistory } from 'react-router-dom';
 import * as ROUTES from '../constants/routes';
 import FirebaseContext from '../context/firebase';
 import UserContext from '../context/user';
+import { ReactComponent as CartIcon } from '../svgs/cart.svg';
+import { ReactComponent as SearchIcon } from '../svgs/search.svg';
 
 export default function Header() {
   const user = false;
@@ -38,7 +40,23 @@ export default function Header() {
             )}
           </div>
 
-          <div className="flex justify-center items-center">nav</div>
+          <div className="flex justify-center items-center text-black-base cursor-pointer">
+            <button type="button" className="w-20 h-8 flex justify-center items-center">
+              <SearchIcon />
+            </button>
+            |
+            <NavLink to={ROUTES.SIGN_IN}>
+              <button
+                type="button"
+                className="font-bold text-sm text-black-base font-Itim rounded w-20 h-8"
+              >
+                Sign In
+              </button>
+            </NavLink>
+            <NavLink to={ROUTES.CART} aria-label="View Cart">
+              <CartIcon />
+            </NavLink>
+          </div>
         </div>
       </div>
     </header>

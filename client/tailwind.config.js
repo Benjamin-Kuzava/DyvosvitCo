@@ -3,12 +3,18 @@ module.exports = {
     removeDeprecatedGapUtilities: true
   },
   theme: {
+    extend: {
+      fontFamily: {
+        Itim: ['Itim', 'cursive']
+      }
+    },
     colors: {
       white: '#ffffff',
       blue: {
         medium: '#005c98'
       },
       black: {
+        base: '#000000',
         light: '#262626',
         faded: '#00000059'
       },

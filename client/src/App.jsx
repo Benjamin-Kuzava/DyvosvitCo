@@ -15,7 +15,7 @@ function App() {
 
   return (
     <UserContext.Provider value={user}>
-      <Suspense fallback={<Loading />}>
+      <Suspense fallback={<Loading delay={500} />}>
         <Switch>
           <Route path={ROUTES.HOME} component={Home} />
         </Switch>
